@@ -1,5 +1,9 @@
 # Filter Hopper
 
+![NeoForge](https://img.shields.io/badge/NeoForge-1.21.1-orange)
+![Version](https://img.shields.io/badge/Version-1.0.0-blue)
+![License](https://img.shields.io/badge/License-All%20Rights%20Reserved-red)
+
 Ein Hopper mit konfigurierbarem Itemfilter für NeoForge 1.21.1.
 
 ## Features

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Filter_Hopper.iml" filepath="$PROJECT_DIR$/.idea/modules/Filter_Hopper.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Filter_Hopper.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Filter_Hopper.main.iml" />
     </modules>
   </component>
