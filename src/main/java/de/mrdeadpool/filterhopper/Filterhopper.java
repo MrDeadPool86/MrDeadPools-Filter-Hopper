@@ -15,6 +15,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import de.mrdeadpool.filterhopper.block.FilterHopperBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import de.mrdeadpool.filterhopper.item.FilterItem;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraft.network.chat.Component;
@@ -60,14 +61,20 @@ public class Filterhopper {
                     )
             );
 
+    public static final DeferredItem<FilterItem> FILTER_ITEM =
+            ITEMS.register("filter",
+                    () -> new FilterItem(new Item.Properties())
+            );
+
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> FILTER_TAB =
             CREATIVE_MODE_TABS.register("filter_tab", () ->
                     CreativeModeTab.builder()
                             .title(Component.literal("Filter Hopper"))
                             .icon(() -> FILTER_HOPPER_ITEM.get().getDefaultInstance())
-                            .displayItems((params, output) ->
-                                    output.accept(FILTER_HOPPER_ITEM.get())
-                            )
+                            .displayItems((params, output) -> {
+                                output.accept(FILTER_HOPPER_ITEM.get());
+                                output.accept(FILTER_ITEM.get());
+                            })
                             .build()
             );
 
